@@ -1,21 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
+import 'bulma/css/bulma.min.css';
 import './App.css';
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
+            <Nav/>
+            <Footer/>
         </div>
     );
 }
