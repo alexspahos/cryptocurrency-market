@@ -1,29 +1,26 @@
 import React from 'react';
 import 'bulma/css/bulma.min.css';
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Nav } from './components/Nav';
 import { Footer } from './components/Footer';
+import { Home } from './pages/Home';
+import { Coin } from './pages/Coin';
 
 function App() {
     return (
         <div className="App">
             <Router>
                 <Nav/>
-                <Route path="/" component={Home} />
-                <Route path="/about" component={About} />
+                <Switch>
+                    <Route exact path="/" component = { Home } />
+                    <Route path="/home" component = { Home } />
+                    <Route path="/coin" component = { Coin } />
+                </Switch>
                 <Footer/>
             </Router>
         </div>
     );
 }
-
-function Home() {
-    return <>home</>;
-}
   
-function About() {
-    return <>about</>;
-}
-
 export default App;
